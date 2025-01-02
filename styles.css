@@ -1,0 +1,133 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Header Styling */
+body {
+    font-family: 'Poppins', sans-serif; /* Same modern font */
+    background: linear-gradient(to right, #141E30, #243B55); /* Dark gradient background */
+    color: #f4f4f4; /* Light text color for contrast */
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Header */
+header {
+    background: rgba(0, 0, 0, 0.5); /* Dark semi-transparent header */
+    color: #f4f4f4;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6); /* Darker shadow for dark mode */
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-top: 5px;
+    font-weight: 300;
+}
+
+/* Semester Section */
+#semester-options {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 0 10px;
+    max-width: 1200px;
+flex:1;
+}
+
+/* Semester Cards */
+.semester-card {
+    background: #1F2933; /* Dark card background */
+    width: 30%;
+    margin: 20px;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Subtle dark shadow */
+    transition: all 0.4s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.semester-card h2 {
+    color: #F9AA33; /* Accent color for text */
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+/* Hover Effect */
+.semester-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300%;
+    height: 300%;
+    background: radial-gradient(circle, rgba(249, 170, 51, 0.2), transparent);
+    transition: all 0.5s ease;
+    transform: translateX(-100%) translateY(-100%);
+}
+
+.semester-card:hover::before {
+    transform: translateX(0%) translateY(0%);
+}
+
+.semester-card:hover {
+    transform: translateY(-12px) scale(1.05);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.75); /* Stronger shadow for hover */
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .semester-card {
+        width: 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    .semester-card {
+        width: 100%;
+    }
+}
+body, header, h1, p, .semester-card {
+    transition: all 0.3s ease-in-out;
+}
+footer {
+    margin-top: 50px;
+    padding: 20px 0;
+    background-color: rgba(0, 0, 0, 0.6); /* Darker background for footer */
+    color: #f4f4f4; /* Light color for text */
+    font-size: 0.9rem; /* Smaller text */
+    text-align: center;
+}
+
+footer a {
+    color: #F9AA33; /* Same accent color for links */
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #fff; /* Lighter color on hover */
+}
+#semester-card-1{
+    background-color: #f1f1f1;
+   align-items: left;
+   justify-content: left;
+    cursor: pointer;
+}
